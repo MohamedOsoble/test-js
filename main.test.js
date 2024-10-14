@@ -11,7 +11,7 @@ test('capitalizes the first letter of the input string', () => {
 });
 
 test('reverses the input string', () => {
-  expect(reverseString('Hello World')).toMatch('dlroW elloH');
+  expect(reverseString('Hello World')).toMatch('dlroW olleH');
   expect(reverseString('123normandy')).toMatch('ydnamron321');
   expect(reverseString('j')).toMatch('j');
 });
