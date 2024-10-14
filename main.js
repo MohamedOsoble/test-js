@@ -7,8 +7,8 @@ function capitalize(inputString){
     return (inputString.charAt(0)).toUpperCase() + inputString.substring(1);
 };
 
-function reverseString(){
-    return;
+function reverseString(inputString){
+    return inputString.split('').reverse().join('');
 };
 
 class Calculator{
