@@ -11,20 +11,13 @@ function reverseString(inputString){
     return inputString.split('').reverse().join('');
 };
 
-class Calculator{
-    sum(){
-        return;
-    }
-    subtract(){
-        return;
-    }
-    divide(){
-        return;
-    };
-    multiply(){
-        return;
-    };
-};
+const calculator = (function () {
+    const add = (x, y) => x + y;
+    const subtract = (x, y) => x - y;
+    const multiply = (x, y) => x * y;
+    const divide = (x, y) => x / y;
+    return {add, subtract, multiply, divide};
+})();
 
 function caesarCipher(){
     return;
@@ -34,4 +27,4 @@ function analyzeArray(){
     return;
 };
 
-export {sum, capitalize, reverseString, Calculator, caesarCipher, analyzeArray};
+export {sum, capitalize, reverseString, calculator, caesarCipher, analyzeArray};
