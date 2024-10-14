@@ -1,4 +1,4 @@
-import {sum, capitalize, reverseString, Calculator, caesarCipher, analyzeArray} from './main';
+import {sum, capitalize, reverseString, calculator, caesarCipher, analyzeArray} from './main';
 
 
 test('capitalizes the first letter of the input string', () => {
@@ -14,7 +14,7 @@ test('reverses the input string', () => {
 });
 
 test('adds x + y to equal z', () => {
-  expect(Calculator.sum(1, 2)).toBe(3);
-  expect(Calculator.sum(5, 25)).toBe(30);
-  expect(Calculator.sum(-25, -5)).toBe(-30);
+  expect(calculator.add(1, 2)).toBe(3);
+  expect(calculator.add(5, 25)).toBe(30);
+  expect(calculator.add(-25, -5)).toBe(-30);
 });
