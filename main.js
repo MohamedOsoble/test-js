@@ -3,8 +3,8 @@ function sum(a, b) {
   }
 
 
-function capitalize(){
-    return
+function capitalize(inputString){
+    return (inputString.charAt(0)).toUpperCase() + inputString.substring(1);
 };
 
 function reverseString(){
