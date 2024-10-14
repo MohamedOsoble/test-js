@@ -18,3 +18,23 @@ test('adds x + y to equal z', () => {
   expect(calculator.add(5, 25)).toBe(30);
   expect(calculator.add(-25, -5)).toBe(-30);
 });
+
+test('subtracts 10 from 13 to equal 3', () => {
+  expect(calculator.subtract(13, 10)).toBe(3);
+});
+
+test('subtracts into negative number', () => {
+  expect(calculator.subtract(5, 10)).toBe(-5);
+});
+
+test('multiply two positive integers, 5 and 3, to give 15', () => {
+  expect(calculator.multiply(5, 3)).toBe(15);
+});
+
+test('multiple one positive (5), and one negative(-3) integers to give -15', () =>{
+  expect(calculator.multiply(5, -3)).toBe(-15);
+});
+
+test('divide two positive dividable integers(49 and 7) to be 7', () =>{
+  expect(calculator.divide(49, 7)).toBe(7);
+});
