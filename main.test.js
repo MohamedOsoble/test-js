@@ -38,3 +38,15 @@ test('multiple one positive (5), and one negative(-3) integers to give -15', () 
 test('divide two positive dividable integers(49 and 7) to be 7', () =>{
   expect(calculator.divide(49, 7)).toBe(7);
 });
+
+test('shifts "Hello World" by 3 to give "Khoor, Zruog"', () => {
+  expect(caesarCipher('Hello World', 3)).toMatch('Khoor, Zruog');
+});
+
+test('Complete shift, "Hello World" by 26 to give "Hello World"', () => {
+  expect(caesarCipher('Hello World', 26)).toMatch('Hello World');
+});
+
+test('Wrap from Z to A, xyz to should shift to abc', () => {
+  expect(caesarCipher('xyz', 3)).toMatch('abc');
+});

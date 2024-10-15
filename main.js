@@ -19,8 +19,26 @@ const calculator = (function () {
     return {add, subtract, multiply, divide};
 })();
 
-function caesarCipher(){
-    return;
+function caesarCipher(message, key){
+    let encryptedMessage = "";
+    for(let i = 0; i < message.length; i++){
+        let encryptedChar = message.charCodeAt(i);
+        if(encryptedChar >= 65 && encryptedChar <= 65 + 25){
+            encryptedChar -= 65;
+            encryptedChar = modulo(encryptedChar + key);
+            encryptedChar += 65;
+        };
+        encryptedMessage += String.fromCharCode(encryptedChar);
+    };
+    return encryptedMessage;
+};
+
+
+function modulo(charCode){
+    if (charCode < 0){
+        charCode = 26 - Math.abs(charCode) % 26;
+    }
+    return charCode % 26;
 };
 
 function analyzeArray(){
