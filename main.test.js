@@ -40,7 +40,7 @@ test('divide two positive dividable integers(49 and 7) to be 7', () =>{
 });
 
 test('shifts "Hello World" by 3 to give "Khoor, Zruog"', () => {
-  expect(caesarCipher('Hello World', 3)).toMatch('Khoor, Zruog');
+  expect(caesarCipher('Hello, World', 3)).toMatch('Khoor, Zruog');
 });
 
 test('Complete shift, "Hello World" by 26 to give "Hello World"', () => {
@@ -49,4 +49,31 @@ test('Complete shift, "Hello World" by 26 to give "Hello World"', () => {
 
 test('Wrap from Z to A, xyz to should shift to abc', () => {
   expect(caesarCipher('xyz', 3)).toMatch('abc');
+});
+
+test('returns array with average of 4, min of 1, max of 8 and length of 6', () => {
+  expect(analyzeArray([1, 8, 3, 4, 2, 6])).toEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6
+  })
+});
+
+test('tests empty array to return all 0s', () => {
+  expect(analyzeArray([])).toEqual({
+    average: 0,
+    min: 0,
+    max: 0,
+    length: 0
+  })
+});
+
+test('tests array with single value (8) to be all 8 except lenght of 1', () => {
+  expect(analyzeArray([8])).toEqual({
+    average: 8,
+    min: 8,
+    max: 8,
+    length: 1
+  })
 });
